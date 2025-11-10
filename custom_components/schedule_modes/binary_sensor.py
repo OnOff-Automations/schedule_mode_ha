@@ -236,15 +236,18 @@ class EventModesSummaryBinarySensor(BinarySensorEntity):
 
     @property
     def is_on(self) -> bool:
-        return any((self.hass.states.get(f"switch.{k}") or {}).state == "on" for k in self._event_keys)
+        return any(
+            (state := self.hass.states.get(f"switch.{k}")) and state.state == "on"
+            for k in self._event_keys
+        )
 
     @property
     def extra_state_attributes(self):
         active = [
             k
             for k in self._event_keys
-            if (self.hass.states.get(f"switch.{k}") or None)
-            and self.hass.states.get(f"switch.{k}").state == "on"
+            if (state := self.hass.states.get(f"switch.{k}"))
+            and state.state == "on"
         ]
         return {"active_event_modes": active}
 
