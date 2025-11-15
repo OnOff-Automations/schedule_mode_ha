@@ -349,10 +349,10 @@ logger:
 ---
 ## Upcoming Featurs
  - Option to link each mode with a remote calendar
- - Auto delete automatic calendar event sensors after x days
- - In ConfigFlow, add more modes on yourself
- - Ad ConfigFlow option for the No Tachanun sensor to always be turned off on Shabbos and Yom Tov
- - Option when Bris syncs with No Tachanun, No Tachanun should turn on from the Alos Till Chatzus
+ - Auto delete automatic calendar event sensors after x days - In progress
+ - In ConfigFlow, add more modes on yourself  - In progress
+ - Ad ConfigFlow option for the No Tachanun sensor to always be turned off on Shabbos and Yom Tov  - In progress
+ - Option when Bris syncs with No Tachanun, No Tachanun should turn on from the Alos Till Chatzus  - In progress
  - Use time duration options to override the calendar event and turn off switches with duration time, have a swtich to override duration time
 
 **Made with ❤️ for Home Assistant and Jewish community**
